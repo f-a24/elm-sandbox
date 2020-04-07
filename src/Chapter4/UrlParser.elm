@@ -1,4 +1,4 @@
-module UrlParser exposing (urlToRoute)
+module Chapter4.UrlParser exposing (urlToRoute)
 
 import Url exposing (Url)
 import Url.Parser exposing ((</>), (<?>), Parser, int, map, oneOf, s, top)

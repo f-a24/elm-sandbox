@@ -1,9 +1,9 @@
-module SearchBox exposing (main)
+module Chapter3.SearchBox exposing (main)
 
 import Browser
-import Html exposing (..)
-import Html.Attributes exposing (..)
-import Html.Events exposing (..)
+import Html exposing (Html, a, button, div, img, input, text)
+import Html.Attributes exposing (autofocus, disabled, href, placeholder, src, target, value, width)
+import Html.Events exposing (onInput, onSubmit)
 import Http
 import Json.Decode as D exposing (Decoder)
 

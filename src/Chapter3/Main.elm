@@ -1,4 +1,4 @@
-module Main exposing (add, main, output)
+module Chapter3.Main exposing (add, main, output)
 
 import Browser
 import Html exposing (Html, a, button, div, form, h1, input, li, text, ul)

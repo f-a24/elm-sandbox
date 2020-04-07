@@ -1,7 +1,7 @@
-module Timer exposing (main)
+module Chapter3.Timer exposing (main)
 
 import Browser
-import Html exposing (..)
+import Html exposing (Html, h1, text)
 import Task
 import Time
 
@@ -52,7 +52,7 @@ update msg model =
 -- SUBSCRIPTIONS
 
 subscriptions : Model -> Sub Msg
-subscriptions model =
+subscriptions _ =
     Time.every 1000 Tick
 
 -- VIEW

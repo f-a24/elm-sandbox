@@ -1,15 +1,15 @@
-module GitHubViewer exposing (main)
+module Chapter4.GitHubViewer exposing (main)
 
 import Browser
 import Browser.Navigation as Nav
+import Chapter4.GitHub as GitHub exposing (Repo, Issue)
 import Html exposing (Html, a, h1, ul, li, pre, span, text)
 import Html.Attributes exposing (href)
 import Http
-import Route exposing (Route)
+import Chapter4.Route as Route exposing (Route)
 import Url
 import Url.Builder
 
-import GitHub exposing (Issue, Repo)
 
 
 --- MAIN

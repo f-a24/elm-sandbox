@@ -1,9 +1,8 @@
-port module Ports exposing (main)
+port module Chapter4.Ports exposing (main)
 
 import Browser
-import Html exposing (..)
-import Html.Attributes exposing (..)
-import Html.Events exposing (..)
+import Html exposing (Html, button, div, text)
+import Html.Events exposing (onClick)
 
 main : Program () Model Msg
 main =
@@ -17,8 +16,7 @@ main =
 
 --- MODEL
 
-type alias Model =
-    { answer: Maybe Bool }
+type alias Model = { answer: Maybe Bool }
 
 init: () -> ( Model, Cmd Msg )
 init _ =
@@ -54,7 +52,7 @@ port receiveAnswer : (Bool -> msg) -> Sub msg
 
 
 subscriptions : Model -> Sub Msg
-subscriptions model =
+subscriptions _ =
     receiveAnswer ReceiveAnswer
 
 

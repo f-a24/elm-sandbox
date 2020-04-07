@@ -1,9 +1,9 @@
-module Navigation exposing (..)
+module Chapter4.Navigation exposing (main)
 
 import Browser
 import Browser.Navigation as Nav
-import Html exposing (..)
-import Html.Attributes exposing (..)
+import Html exposing (Html, a, b, ul, li, text)
+import Html.Attributes exposing (href)
 import Url
 
 --- MAIN
@@ -28,7 +28,7 @@ type alias Model =
     }
 
 init: () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
-init flags url key =
+init _ url key =
     ( Model key url, Cmd.none )
 
 
@@ -56,7 +56,7 @@ update msg model =
 --- SUBSCRIPTIONS
 
 subscriptions : Model -> Sub Msg
-subscriptions model =
+subscriptions _ =
     Sub.none
 
 

@@ -1,4 +1,4 @@
-module GitHub exposing (Issue, Repo, getIssues, getRepos)
+module Chapter4.GitHub exposing (Issue, Repo, getIssues, getRepos)
 
 import Http
 import Json.Decode as D exposing (Decoder)
