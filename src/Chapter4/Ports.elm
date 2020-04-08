@@ -16,11 +16,10 @@ main =
 
 --- MODEL
 
-type alias Model = { answer: Maybe Bool }
+type alias Model = Maybe Bool
 
 init: () -> ( Model, Cmd Msg )
-init _ =
-    ( Model Nothing, Cmd.none )
+init _ = ( Nothing, Cmd.none )
 
 
 ---UPDATE
@@ -41,7 +40,7 @@ update msg model =
              ( model, confirm "本当に商品を購入してよろしいですか？" )
 
         ReceiveAnswer answer ->
-             ( Model (Just answer), Cmd.none )
+             ( Just answer, Cmd.none )
 
 
 --- SUBSCRIPTIONS
@@ -62,7 +61,7 @@ subscriptions _ =
 view : Model -> Html Msg
 view model =
     div []
-        [ case model.answer of
+        [ case model of
             Nothing ->
                 button [onClick Confirm ] [ text "商品を購入する" ]
 
